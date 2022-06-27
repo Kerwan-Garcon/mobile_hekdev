@@ -12,15 +12,15 @@
         app:showAsAction="never"/>
     <item
         android:id="@+id/pc"
-        android:title="@string/prix_croissant"
+        android:title="@string/asc_price"
         app:showAsAction="never"/>
     <item
         android:id="@+id/pdc"
-        android:title="@string/prix_d_croissant"
+        android:title="@string/dsc_price"
         app:showAsAction="never"/>
     <item
         android:id="@+id/Furniture"
-        android:title="@string/meuble"
+        android:title="@string/furniture"
         app:showAsAction="never"/>
     <item
         android:id="@+id/Bed"

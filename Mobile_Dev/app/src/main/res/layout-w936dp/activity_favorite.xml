@@ -5,10 +5,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".ProfileActivity">
+    tools:context=".FavoriteActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar_user_profile_activity"
+        android:id="@+id/toolbar_fav_product"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@drawable/bg_head_log"
@@ -115,7 +115,7 @@
                     android:id="@+id/et_prenom"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Kerwan"
+                    android:hint="Paul"
                     android:inputType="text"
                     android:padding="12dp"
                     android:textColor="@color/black"
@@ -140,7 +140,7 @@
                     android:id="@+id/et_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Kerwan.Dubois@gmail.com"
+                    android:hint="Paul.Dubois@gmail.com"
                     android:inputType="text"
                     android:padding="12dp"
                     android:textColor="@color/black"

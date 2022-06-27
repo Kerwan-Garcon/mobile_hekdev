@@ -18,6 +18,7 @@ class ProductDetailsActivity : ErrorActivity(), View.OnClickListener {
     private var productId: String = ""
     private lateinit var productDetails: Product
     private var starsId: String = ""
+    private var mRatingVal: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -157,7 +158,6 @@ class ProductDetailsActivity : ErrorActivity(), View.OnClickListener {
             Constant.CHECK_TYPE_FAV,
             null
         )
-        Toast.makeText(this, "U'r going there bro", Toast.LENGTH_SHORT).show()
     }
 
     fun updatedAllDetailsSuccessful(isFav: Boolean) {
@@ -189,10 +189,10 @@ class ProductDetailsActivity : ErrorActivity(), View.OnClickListener {
 
     fun getRatingSuccessful(ratingVal: Double) {
         binding.ratingTotalBar.rating = ratingVal.toFloat()
-        FireStoreClass().updateRateProduct(this, productId, ratingVal.toFloat())
+        mRatingVal = ratingVal.toString()
     }
 
-    fun updatedAllDetailsSuccessful() {
+    fun updateSuccessful() {
         Toast.makeText(this, "Your action has been completed.", Toast.LENGTH_SHORT).show()
     }
 
@@ -222,6 +222,8 @@ class ProductDetailsActivity : ErrorActivity(), View.OnClickListener {
         getOwnRating()
         getRating()
         Toast.makeText(this, "Thanks for your rating.", Toast.LENGTH_SHORT).show()
+        FireStoreClass().updateRateProduct(this, productId, mRatingVal.toFloat())
+
     }
 
 }

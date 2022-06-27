@@ -28,6 +28,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Design.NoActionBar" />
         <activity
+            android:name=".FavoriteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Design.NoActionBar" />
+
+        <activity
             android:name=".CheckoutActivity"
             android:exported="false"
             android:screenOrientation="portrait"

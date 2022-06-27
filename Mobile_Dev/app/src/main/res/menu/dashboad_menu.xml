@@ -11,4 +11,9 @@
         android:icon="@drawable/ic_vector_settings"
         android:title="@string/title_settings"
         app:showAsAction="always"/>
+    <item
+        android:id="@+id/action_fav"
+        android:icon="@drawable/ic_baseline_favorite_border_36"
+        android:title="@string/title_fav"
+        app:showAsAction="always"/>
 </menu>

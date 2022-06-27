@@ -126,7 +126,6 @@ class RegisterActivity : ErrorActivity(), View.OnClickListener {
                                 binding.logEmail.text.toString().trim { it <= ' ' })
                         }
                         FireStoreClass().registerUser(this, user!!)
-                        showError("Inscription réussie. Votre id est ${fireUser?.uid}", false)
 
                     } else {
                         hideLoadingDialog()
@@ -145,6 +144,7 @@ class RegisterActivity : ErrorActivity(), View.OnClickListener {
         hideLoadingDialog()
         Toast.makeText(this, resources.getString(R.string.registery_success), Toast.LENGTH_SHORT)
             .show()
+        finish()
     }
 
 }

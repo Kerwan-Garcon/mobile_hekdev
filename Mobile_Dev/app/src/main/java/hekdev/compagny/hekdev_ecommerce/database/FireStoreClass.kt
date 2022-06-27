@@ -48,7 +48,7 @@ class FireStoreClass {
             .addOnSuccessListener {
                 when (activity) {
                     is ProductDetailsActivity -> {
-                        activity.updatedAllDetailsSuccessful()
+                        activity.updateSuccessful()
                     }
                 }
             }
@@ -201,6 +201,10 @@ class FireStoreClass {
             }
     }
 
+    fun getFavProductsList() {
+
+    }
+
     fun getDashboardList(fragment: DashboardFragment) {
         fireStore.collection(Constant.PRODUCTS)
             .whereGreaterThanOrEqualTo(Constant.PRODUCT_RATING, Constant.BEST_PRODUCT).get()
@@ -252,7 +256,7 @@ class FireStoreClass {
             )
         )
         ref.putFile(image!!).addOnSuccessListener { task ->
-            Log.e("Firebase IMG", task.metadata!!.reference!!.downloadUrl.toString())
+            Log.e("Image :", task.metadata!!.reference!!.downloadUrl.toString())
 
             task.metadata!!.reference!!.downloadUrl.addOnSuccessListener { uri ->
                 Log.e("Dl img url ", uri.toString())

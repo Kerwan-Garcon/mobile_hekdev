@@ -6,6 +6,7 @@ import android.view.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import hekdev.compagny.hekdev_ecommerce.CardListActivity
+import hekdev.compagny.hekdev_ecommerce.FavoriteActivity
 import hekdev.compagny.hekdev_ecommerce.R
 import hekdev.compagny.hekdev_ecommerce.SettingActivity
 import hekdev.compagny.hekdev_ecommerce.database.FireStoreClass
@@ -66,6 +67,10 @@ class DashboardFragment : BaseFragment() {
                 startActivity(Intent(activity, CardListActivity::class.java))
                 return true
             }
+            /*R.id.action_fav -> {
+                startActivity(Intent(activity, FavoriteActivity::class.java))
+                return true
+            }*/
         }
         return super.onOptionsItemSelected(item)
     }
